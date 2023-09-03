@@ -1,7 +1,7 @@
 import React from "react";
 
-function Buttons() {
+function MainPage() {
   return <></>;
 }
 
-export default Buttons;
+export default MainPage;
