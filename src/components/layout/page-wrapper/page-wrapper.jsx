@@ -5,12 +5,13 @@ import "./page-wrapper.css"
 import Footer from "../footer/footer";
 
 
-function PageWrapper() {
+
+function PageWrapper({stars}) {
   return(
   <>
     <Header/>
     <main className="page-wrapper__main">
-      <MainPage/>
+      <MainPage stars={stars}/>
     </main>
     <Footer/>
   </>

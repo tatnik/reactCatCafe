@@ -4,16 +4,24 @@ import Button from "../../ui/button/button";
 import StarCard from "../../ui/star-card/star-card";
 import "./stars-list.css"
 
-function StarsList() {
+function StarsList({stars}) {
+    
   return (
-    <section className="star-list">
+    <section className="stars-list">
+      {stars?.length ? (
+      <>
       <Title>Наши звёзды</Title>
-      <ul className="star-list__list">
-        <li className="star-list__item">
-          <StarCard />
-        </li>
+      <ul className="stars-list__list">
+        {stars.map((star) => (
+          <li className="stars-list__item" key={star.id}>
+            <StarCard  {...star}/>
+          </li> 
+          ))}
       </ul>
       <Button minWidth={353}>Купить билет</Button>
+      </>
+      )
+      :null} 
     </section>
   );
 }

@@ -1,9 +1,10 @@
 import React from "react";
 import Title, { TitleSize } from "../title/title";
-import image from "../../../assets/star-card-3.jpg"
 import "./star-card.css"
+import StarIcon from "../star-icon/star-icon";
 
-function StarCard() {
+function StarCard({name,image,about,feature}) {
+
   return (
     <article className="star-card">
       <figure className="star-card__figure">
@@ -14,12 +15,11 @@ function StarCard() {
           height={320}
           alt="изображение кота"
         />
-        <span className="star-card__icon">Ласковый</span>
+        <StarIcon feature={feature}/>
       </figure>
-      <Title size={TitleSize.SMALL}>Кошка Сью</Title>
+      <Title size={TitleSize.SMALL}>{name}</Title>
       <p className="star-card__text">
-        Эта юная красавица очень общительная и ласковая уже с первого дня, как
-        приехала в кафе.
+        {about}
       </p>
     </article>
   );
