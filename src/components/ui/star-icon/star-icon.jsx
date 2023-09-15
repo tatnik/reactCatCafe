@@ -1,33 +1,35 @@
 import React from "react";
-import "./star-icon.css"
+import { StyledStarIcon } from "./styles.js";
 
-function StarIcon({feature}) {
-  let options;  
-  switch (feature.toLowerCase()){
-    case "new" :
-      options = { 
-       text: "New",
-       color: "#ffb334"
-       }
+function StarIcon({ feature }) {
+  let options;
+  switch (feature.toLowerCase()) {
+    case "new":
+      options = {
+        text: "New",
+        color: "#ffb334"
+      }
       break;
-    case "soft" :
-       options = {
+    case "soft":
+      options = {
         text: "Ласковый",
         color: "#7fc92e"
-       }
+      }
       break;
     default:
       options = {
-       text: "",
-       color:"#000" 
+        text: "",
+        color: "#000"
       }
   }
-  
+
   return (
-        options.text.length
-        ? <span className="star-icon" style={{backgroundColor: options.color}}>{options.text}</span>
-        : null
-);
+    options.text ? (
+      <StyledStarIcon $bgColor={options.color}>
+        {options.text}
+      </StyledStarIcon>
+    ) : null
+  );
 }
 
 export default StarIcon;

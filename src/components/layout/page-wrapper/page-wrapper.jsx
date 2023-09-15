@@ -1,20 +1,20 @@
 import React from "react";
 import Header from "../header/header";
 import MainPage from "../../pages/main-page/main-page";
-import "./page-wrapper.css"
 import Footer from "../footer/footer";
+import { Main } from "./styles";
 
 
 
-function PageWrapper({stars}) {
-  return(
-  <>
-    <Header/>
-    <main className="page-wrapper__main">
-      <MainPage stars={stars}/>
-    </main>
-    <Footer/>
-  </>
+function PageWrapper({ children, ...prop }) {
+  return (
+    <>
+      <Header />
+      <Main>
+        <MainPage {...prop} />
+      </Main>
+      <Footer />
+    </>
   );
 }
 

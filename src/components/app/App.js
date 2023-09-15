@@ -1,11 +1,13 @@
 import PageWrapper from './../layout/page-wrapper/page-wrapper';
 import starsList from "../../mocks/stars-list"
+import { GlobalStyle } from '../../styles';
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <GlobalStyle />
       <PageWrapper stars={starsList} />
-    </div>
+    </>
   );
 }
 

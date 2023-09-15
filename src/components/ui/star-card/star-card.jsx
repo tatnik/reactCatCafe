@@ -1,27 +1,26 @@
 import React from "react";
-import Title, { TitleSize } from "../title/title";
-import "./star-card.css"
+import Title, { TitleSize } from "../title/title.jsx";
 import StarIcon from "../star-icon/star-icon";
+import { Figure, Image, Text, StyledStarCard } from "./styles.js";
 
-function StarCard({name,image,about,feature}) {
+function StarCard({ name, image, about, feature }) {
 
   return (
-    <article className="star-card">
-      <figure className="star-card__figure">
-        <img
+    <StyledStarCard>
+      <Figure>
+        <Image
           src={image}
-          className="star-card__image"
           width={313}
           height={320}
           alt="изображение кота"
         />
-        <StarIcon feature={feature}/>
-      </figure>
+        <StarIcon feature={feature} />
+      </Figure >
       <Title size={TitleSize.SMALL}>{name}</Title>
-      <p className="star-card__text">
+      <Text>
         {about}
-      </p>
-    </article>
+      </Text>
+    </StyledStarCard>
   );
 }
 
