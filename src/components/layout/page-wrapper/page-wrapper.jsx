@@ -3,6 +3,7 @@ import Header from "../header/header";
 import MainPage from "../../pages/main-page/main-page";
 import Footer from "../footer/footer";
 import { Main } from "./styles";
+import BuyPage from "../../pages/buy-page/buy-page";
 
 
 
@@ -11,7 +12,7 @@ function PageWrapper({ children, ...prop }) {
     <>
       <Header />
       <Main>
-        <MainPage {...prop} />
+        <BuyPage {...prop} />
       </Main>
       <Footer />
     </>
