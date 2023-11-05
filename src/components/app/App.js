@@ -7,12 +7,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AppRoute } from '../../const';
 import MainPage from './../pages/main-page/main-page';
 import BuyPage from './../pages/buy-page/buy-page';
+import ScrollTop from '../ui/scroll-top/scroll-top';
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <Router>
+        <ScrollTop />
         <Routes>
           <Route
             path={AppRoute.MAIN}
